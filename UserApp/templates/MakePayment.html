@@ -1,0 +1,25 @@
+{%extends "master.html"%}
+{%block content%}
+<div class="container">
+    <h4>{{msg}}</h4>
+    <h2>Make Payment</h2>
+    <form method="post">
+        <div class="form-group">
+        {%csrf_token%}    
+<table class="table">
+    <tr><td>Enter Name On Card</td><td>
+        <input class="form-control" type="text" 
+        name="uname" placeholder="Name on card"/></td></tr>
+    <tr><td>Enter Card No.</td><td>
+        <input class="form-control" type="text" name="card_no" placeholder="Card Number"/></td></tr>
+    <tr><td>Enter Expiry</td><td>
+        <input type="text" class="form-control" name="expiry" placeholder="expiry"/></td></tr>    
+    <tr><td>Enter CVV</td><td>
+            <input type="text" class="form-control" 
+            name="cvv" placeholder="CVV"/></td></tr>    
+    <tr><td><button type="submit"  class="btn btn-success">Make Payment</button></td><td></td></tr>
+</table>
+</div>
+</form>
+</div>
+{%endblock%}
